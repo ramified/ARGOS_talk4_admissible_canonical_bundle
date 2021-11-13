@@ -1,0 +1,8 @@
+\contentsline {section}{\tocsection {}{1}{Berkovich space}}{1}% 
+\contentsline {section}{\tocsection {}{2}{metric and measure}}{1}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{metric of line bundle}}{1}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{the Chambert-Loir measure}}{1}% 
+\contentsline {section}{\tocsection {}{3}{statement of the main theorem}}{2}% 
+\contentsline {section}{\tocsection {}{4}{uniqueness}}{2}% 
+\contentsline {section}{\tocsection {}{5}{existence--unfinished}}{2}% 
+\contentsline {section}{\tocsection {}{}{References}}{2}% 
