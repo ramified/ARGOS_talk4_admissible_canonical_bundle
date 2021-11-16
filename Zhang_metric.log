@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  13 NOV 2021 22:02
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 NOV 2021 00:18
 entering extended mode
 **./Zhang_metric.tex
 (Zhang_metric.tex
@@ -788,39 +788,39 @@ File: pgflibraryarrows.meta.code.tex 2019/01/05 v3.1 (3.1)
  (Zhang_metric.aux)
 \openout1 = `Zhang_metric.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Try loading font information for U+msa on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for U+msa on input line 94.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 93.
+LaTeX Font Info:    Try loading font information for U+msb on input line 94.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 93.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 94.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 93.
+Package xypdf Info: Line width: 0.43799pt on input line 94.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -859,15 +859,15 @@ ABD: EveryShipout initializing macros (Zhang_metric.toc)
 \tf@toc=\write5
 \openout5 = `Zhang_metric.toc'.
 
- (Zhang_metric.bbl
-[1]) [2] (Zhang_metric.aux) ) 
+ [1] [2] [3]
+(Zhang_metric.bbl) [4] (Zhang_metric.aux) ) 
 Here is how much of TeX's memory you used:
- 16706 strings out of 427748
- 310610 string characters out of 3150981
- 415065 words of memory out of 3000000
- 20238 multiletter control sequences out of 15000+200000
- 17429 words of font info for 79 fonts, out of 3000000 for 9000
+ 17000 strings out of 427748
+ 317922 string characters out of 3150981
+ 431748 words of memory out of 3000000
+ 20526 multiletter control sequences out of 15000+200000
+ 17453 words of font info for 82 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,6n,82p,3261b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,82p,3261b,1049s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Zhang_metric.pdf (2 pages).
+Output written on Zhang_metric.pdf (4 pages).

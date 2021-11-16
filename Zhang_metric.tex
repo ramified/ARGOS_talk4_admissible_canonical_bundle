@@ -38,7 +38,7 @@
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{defn}[theorem]{Definition}
 \newtheorem{ques}[theorem]{Question}
-\newtheorem*{fact}{Facts}
+\newtheorem*{bbox}{Black box}
 \newtheorem{eg}[theorem]{Example}
 
 \theoremstyle{plain}
@@ -84,6 +84,7 @@
 \newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
 \newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
 \newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
@@ -122,11 +123,151 @@ I copied some words from \cite[3.1.1]{yuan2021arithmetic} in the talk to give an
 Idea: the point of a scheme can be viewed as the map to the field, so is the point of the Berkovich space(the special seminorm). If you have not heard about the Berkovich space, you can replace $X^{an}$ to $X(K)$ in the following sections.
 
 \section{metric and measure}
+For the statement of the main theorem, one should introduce concepts of metric (over line bundle) and measure (over Berkovich space).
+
 \subsection{metric of line bundle}
-\subsection{the Chambert-Loir measure}
+Recall that when we learn Riemann metric, we first define it fiberwise, then localwise, and finally globalwise. In today's talk we also define it similarly.
+
+\begin{defn}[fiber of line bundle over Berkovich space]
+Fix the scheme $X/K$ and the line bundle $L$ over $X$. the fiber of $L$ at point $x \in X^{an}$ is defined as
+$$L^{an}(x):= H_x \otimes_{\kappa(\bar{x}) }L(\bar{x}).$$
+
+\end{defn}
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoAmAXVJADcBDAGwFcYkQAPEAX1PU1z5CKchWp0mrdgB1pAI3oAnYB248+IDNjwEiARlIBmcQxZtEIABoA9YPTBre-bUKKGjJyeavrng3Sjuep5m7AAyvpoCOsLIosQhUhZhABSyCsqqAJSRWv6xZAk0pkkgYbb23CkcOdziMFAA5vBEoABmihAAtkhkIDgQSAb99FiM7F30aHADkR3dQzSziO4gjFhg3pCbIDQAFjD0UOzbbEuj4xanu2v0cjCMAArRrhYb2LA3Jd6yG3OdPUQfWWogkoQsv0INEYdwezxcARA7ywn2hGy2BDOIAORxOmJuOAueJ2ThA80BoOWq2+MmkAGspmh6P8FogAGxLQZA-aHY5XfGk8lIACsnMW2N5xLYgoBSAALGKVjzcfySZRuEA
+\begin{tikzcd}[row sep={10mm,between origins}, column sep=3mm, labl/.style={rotate=-30,pos=0.65}, labl2/.style={rotate=-30,pos=0.45}]
+L^{an}(x) \arrow[dd, no head]   &            & L(\bar{x}) \arrow[dd, no head]     &      \\
+            &   &                   & L \arrow[dd, no head] \\[-5mm]
+\hspace{-1.8cm}Spec H_x=x \arrow[rr, maps to] \arrow[rd, "\in" labl, phantom ] &            & \bar{x} \arrow[rd, "\in" labl2, phantom] &      \\
+               & X^{an} \arrow[rr, "\kappa"] &  & X   
+\end{tikzcd}
+
+\end{center}
+\begin{defn}[metric pointwise]
+We define the metric of line bundle $L$ at $x \in X^{an}$ as the norm of $H_x$-modules $L^{an}(x)$:
+$$\norm{\cdot}(x):L^{an}(x) \longrightarrow \mathbb{R}_{>0} \qquad \text{such that }\norm{fs}(x)=|f|_{H_x} \cdot\norm{s}(x) $$
+%\text{ for any $f \in H_x$, $s \in L^{an}(x)$}
+\end{defn}
+\begin{defn}[metric globalwise]
+The metric of line bundle $L$ is defined as the collections of metrics (at every point) such that the metrics vary in a continuous way. Equivalently,
+$$\norm{\cdot}=\left\{ \norm{\cdot}(x)\, \middle|\, x\in X^{an} \text{ + cont} \right\}$$
+where the continuity means for any open subset $U$ of $X$, any section $s \in \Gamma(U)$, the norm map
+$$\norm{s}: U^{an} \longrightarrow \mathbb{R}>0 \qquad x \longmapsto \norm{s}(x):=\norm{s_x}(x)$$
+is continuous.
+
+When we have one metric $\norm{\cdot}$ over $L$, we would call the pair $(L,\norm{\cdot})$ the metrized line bundle.
+\end{defn}
+
+\begin{proposition}
+Here are some easy properties of the metrized line bundle:
+\begin{enumerate}[(1)]
+\item The metrized line bundles over $X$ form a group by
+$$(L_1,\norm{\cdot}_1) \otimes (L_2,\norm{\cdot}_2):=(L_1 \otimes L_2, \norm{\cdot}_1\cdot \norm{\cdot}_2)$$
+the inverse and the idendity is also easily defined;
+\item If one has the map $f:X \longrightarrow Y$ and the metrized line bundle $(L,\norm{\cdot})$ over $Y$, then we can always pull back $f$ to get a metrized line bundle $f^*(L,\norm{\cdot})$ over $X$;
+\item The metric $\norm{\cdot}$ over structure sheaf $\mathcal{O}_X$ can be viewed as a positive real function on $X^{an}$.\footnote{Notice that we have the constant section $1$ of $\mathcal{O}_X$.}
+\end{enumerate} 
+\end{proposition}
+\begin{remark}
+By this definition it's not easy to define integrable metric (or semipositive metric). By translating the metrized line bundles as the adelic line bundles, we can define integrable(it's already done in Talk 3).
+\end{remark}
+Here the Prof. Peter Scholze explains how to translate the metrized line bundles as the adelic line bundles:
+
+
+\subsection{Chambert-Loir measure}
+We may not have any time to define this measure, since defining it needs to introduce quite a lot of concepts, such as arithmetic intersection degree and the arithmetic Chow group. But we can still see the intuition and view some properties as the black box.
+
+\begin{defn}[Chambert-Loir measure, in complex case]
+Suppose $C$ is a projective smooth curve over $\mathbb{C}$, and fix the metrized line bundle $(L,\norm{\cdot})$, the Chambert-Loir measure $c_1(L,\norm{\cdot})$ is defined as the $(1,1)$-form
+$$c_1(L,\norm{\cdot}):= \frac{i}{2\pi}\partial\bar{\partial} \log \norm{s}^2$$
+where $s$ is a local section of $L$ which is nowhere zero.  This definition doesn't depend on the choise of the section $s$.
+\end{defn}
+Notice that on curve $C/\mathbb{C}$, the $(1,1)$-form can be viewed as the measure. Of course we can no longer use this definition when the curve $C$ is over some non-Archimedean field, so I prepare the black box for you:
+\begin{bbox}\
+\begin{enumerate}[(1)]
+\item $c_1(L,\norm{\cdot})$ is an measure on $C^{an}$.
+\item The Chambert-Loir measure is compatible with the group structure of line bundle, i.e.
+\begin{equation*}
+\begin{aligned}
+  &c_1(L_1\otimes L_2,\norm{\cdot}_1\cdot \norm{\cdot}_2)=c_1(L_1,\norm{\cdot}_1)+c_1(L_2,\norm{\cdot}_2),  \\
+   &c_1(L^{\vee},\norm{\cdot})=-c_1(L,\norm{\cdot}^{-1}),\quad\quad c_1(\mathcal{O}_C,\norm{\cdot}_{const})=0.
+\end{aligned}
+\end{equation*}
+\item (non-Archimedean Calabi theorem) Let $\norm{\cdot}$ be an integrable metric on $\mathcal{O}_C$, then
+$$c_1(\mathcal{O}_C,\norm{\cdot})=0 \iff \norm{\cdot} \equiv C_0 $$
+\item (normalization) let $(L,\norm{\cdot})$ be a metrized line bundle of degree $d$, then
+$$\int_{C^{an}} c_1(L,\norm{\cdot})=d.$$
+\end{enumerate}
+\end{bbox}
 \section{statement of the main theorem}
+Fix $K$ be an non-Archimedean field,\footnote{We can suppose $K=\bar{K}$ to avoid some technical conditions.} and $C/K$ be a smooth projective curve, and $x\in C(\bar{K})$ be a point. We have the following canonical maps
+
+\begin{figure}[th]
+	\begin{minipage}[t]{.48\textwidth}
+		\centering
+		\begin{tikzcd}
+		C \arrow[rd, "{(\Id,x)}"] &                                               & C \\
+		C \arrow[r, "\Delta"]     & C\times C \arrow[ru, "p_1"] \arrow[rd, "p_2"] &   \\
+		C \arrow[ru, "{(x,\Id)}"'] &                                               & C
+		\end{tikzcd}
+		\label{fig1}
+	\end{minipage}
+	\begin{minipage}[t]{.48\textwidth}
+		\centering
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBpiBdUkANwEMAbAVxiRAGEQBfU9TXfIRQAmclVqMWbdgB0ZeALbwABJx59seAkTIAGcfWatEIORCUBzOgH12APWByaMGF268QGTYKKj91QykTOQU6HAALAGNGYAB5Lmtge2EuAAo5ABEYBhw6AEp3DQFtFF1SYQNJY1MZUIjohjiE9lSADwL1T34tIWQygGZKo2lucRgoC3giUAAzACdzJDKQHAgkMglh4JksnLpCkHnFxFEVtcRl8Jg6KDZIMFZOo4UkfupV9eorm7uCR49nkgAKzvc4bQLVNqkOQASSgHQBCxeiAALKDgV9rrcTPdHhQuEA
+\begin{tikzcd}[row sep=5mm]
+  &[-12mm] \omega_C^{\vee} \arrow[d, no head] & \mathcal{O}_{C^2}(\Delta) \arrow[d, no head] \\
+  & C \arrow[r, "\Delta"]              & C\times C  \\[-5mm]
+\mathcal{O}_C(x) \arrow[d, no head] &  &            \\
+C \arrow[rruu, "{(x,\Id)}"']         &  &           
+\end{tikzcd}
+		\label{fig2}
+	\end{minipage}
+\end{figure}
+and also some isomorphisms of line bundles:
+\begin{equation*}
+\begin{aligned}
+  \Delta^* \mathcal{O}_{C^2}(\Delta)&\cong \omega_C^{\vee}  \\
+  (x,\Id)^* \mathcal{O}_{C^2}(\Delta)&\cong \mathcal{O}_C(x)
+\end{aligned}
+\end{equation*}
+If we have the metric $\norm{\cdot}_{\Delta}$ over line bundle $\mathcal{O}_{C^2}(\Delta)$, then it induces the metric $\norm{\cdot}_{\omega_C}$ and $\norm{\cdot}_{\mathcal{O}_C(x)}$ by the following ways:
+\begin{equation*}
+\begin{aligned}
+ (\omega_C^{\vee},\norm{\cdot}_{\omega_C}^{-1}) &:= \Delta^* (\mathcal{O}_{C^2}(\Delta), \norm{\cdot}_{\Delta}) \\ 
+ (\mathcal{O}_C(x),\norm{\cdot}_{\mathcal{O}_C(x)}) &:= (x,\Id)^* (\mathcal{O}_{C^2}(\Delta), \norm{\cdot}_{\Delta}) \\ 
+\end{aligned}
+\end{equation*}
+we can also define the Green's functions as follows:
+\begin{equation*}
+\begin{aligned}
+ &g_{\Delta}:(C \times C)^{an} \setminus \Delta^{an} \longrightarrow \mathbb{R} \qquad  &&g_{\Delta}(x,y):=-\log \big(\norm{1}_{\Delta}(x,y)\big)  \\
+ &g_{x}:C^{an} \setminus {x} \longrightarrow \mathbb{R} \qquad  &&g_{x}(y):=-\log \big(\norm{1}_{x}(y)\big) =g_{\Delta}(x,y) \\
+\end{aligned}
+\end{equation*}
+\begin{defn}[symmetric metric]
+The metric $\norm{\cdot}_{\Delta}$ over line bundle $\mathcal{O}_{C^2}(\Delta)$ is symmetric if the corresponding Green's function $g_{\Delta}(x,y)$ is symmetric.
+\end{defn}
+In the following pages, when the norm  $\norm{\cdot}_{\Delta}$ is special, we would replace the notations $\norm{\cdot}_{\Delta}$ by $\norm{\cdot}_{\Delta,a}$, $\norm{\cdot}_{\omega_C}$ by $\norm{\cdot}_{a}$, $\norm{\cdot}_{\mathcal{O}_C(x)}$ by $\norm{\cdot}_{x}$ and $g_{\Delta}$ by $g_{\Delta,a}$. \footnote{Here the letter $a$ means "admissible". We will define the "admissible metric" over curve on Section\ref{sec:existence}, and actually "admissible metric" over $\mathcal{O}_{C^2}(\Delta)$ is defined in \cite[???]{yuan2021arithmetic}.}
+
+Finally we can state our central theorem:
+\begin{theorem}[Zhang's metric]
+There is a unique symmetric integrable metric $\norm{\cdot}_{\Delta,a}$ over $\mathcal{O}_{C^2}(\Delta)$ such that for any finite field extension $K'/K$ and $x,y \in C(K')$, we have
+\begin{enumerate}[(1)]
+\item (compatibility, or admissible) We have the identities
+\begin{equation*}
+\begin{aligned}
+  c_1(\mathcal{O}(x),\norm{\cdot}_x)&=c_1(\mathcal{O}(y),\norm{\cdot}_y)  \\ 
+  (2g-2)c_1(\mathcal{O}(x),\norm{\cdot}_x)&=c_1(\omega_C,\norm{\cdot}_a)  \\ 
+\end{aligned}
+\end{equation*}
+as the Chambert-Loir measure;
+\item (normalization) We always have the equality
+$$\int_{(C_{K'})^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
+\end{enumerate}
+\end{theorem}
 \section{uniqueness}
-\section{existence--unfinished}
+\section{existence--unfinished}\label{sec:existence}
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}
