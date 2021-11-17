@@ -206,9 +206,9 @@ Fix $K$ be an non-Archimedean field,\footnote{We can suppose $K=\bar{K}$ to avoi
 	\begin{minipage}[t]{.48\textwidth}
 		\centering
 		\begin{tikzcd}
-		C \arrow[rd, "{(\Id,x)}"] &                                               & C \\
+		C \arrow[rd, "{(\Id,x)}"] &              & C \\
 		C \arrow[r, "\Delta"]     & C\times C \arrow[ru, "p_1"] \arrow[rd, "p_2"] &   \\
-		C \arrow[ru, "{(x,\Id)}"'] &                                               & C
+		C \arrow[ru, "{(x,\Id)}"'] &              & C
 		\end{tikzcd}
 		\label{fig1}
 	\end{minipage}
@@ -249,10 +249,12 @@ we can also define the Green's functions as follows:
 The metric $\norm{\cdot}_{\Delta}$ over line bundle $\mathcal{O}_{C^2}(\Delta)$ is symmetric if the corresponding Green's function $g_{\Delta}(x,y)$ is symmetric.
 \end{defn}
 In the following pages, when the norm  $\norm{\cdot}_{\Delta}$ is special, we would replace the notations $\norm{\cdot}_{\Delta}$ by $\norm{\cdot}_{\Delta,a}$, $\norm{\cdot}_{\omega_C}$ by $\norm{\cdot}_{a}$, $\norm{\cdot}_{\mathcal{O}_C(x)}$ by $\norm{\cdot}_{x}$ and $g_{\Delta}$ by $g_{\Delta,a}$. \footnote{Here the letter $a$ means "admissible". We will define the "admissible metric" over curve on Section\ref{sec:existence}, and actually "admissible metric" over $\mathcal{O}_{C^2}(\Delta)$ is defined in \cite[???]{yuan2021arithmetic}.}
+\\
+\\
 
 Finally we can state our central theorem:
-\begin{theorem}[Zhang's metric]
-There is a unique symmetric integrable metric $\norm{\cdot}_{\Delta,a}$ over $\mathcal{O}_{C^2}(\Delta)$ such that for any finite field extension $K'/K$ and $x,y \in C(K')$, we have
+\begin{theorem}[Zhang's metric]\label{thm:main}
+Suppose $K=\bar{K}$.\footnote{It's not an essential condition, we just don't want to worry about finite field extension.}There is a unique symmetric integrable metric $\norm{\cdot}_{\Delta,a}$ over $\mathcal{O}_{C^2}(\Delta)$ such that for any $x,y \in C(K)$, we have
 \begin{enumerate}[(1)]
 \item (compatibility, or admissible) We have the identities
 \begin{equation*}
@@ -263,10 +265,54 @@ There is a unique symmetric integrable metric $\norm{\cdot}_{\Delta,a}$ over $\m
 \end{equation*}
 as the Chambert-Loir measure;
 \item (normalization) We always have the equality
-$$\int_{(C_{K'})^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
+$$\int_{(C)^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
 \end{enumerate}
+We will call this metric $\norm{\cdot}_{\Delta,a}$ and its induced metric $\norm{\cdot}_{a}$ as the Zhang's metric.
 \end{theorem}
+
 \section{uniqueness}
+In this section we want to prove the uniqueness part. If we have two metrics $\norm{\cdot}_{\Delta,a}$ and $\norm{\cdot}_{\Delta,a}'$ satisfying the Theorem \ref{thm:main}, we just denote $\norm{\cdot}_a'$, $\norm{\cdot}_x'$, $g_{\Delta,a}'(x,y)$ and $g_x'(y)$ as the induced metrics or Green's functions induced by $\norm{\cdot}_{\Delta,a}'$. We also fix $x_0 \in C(K)$, and denote 
+$$\frac{\norm{\cdot}_{x_0}'(y)}{\norm{\cdot}_{x_0}(y)}=e^{\varphi(y)}$$
+where $\varphi:C^{an} \longrightarrow \mathbb{R}$ is a continous function on $C^{an}$.
+
+We divide the process into four steps:
+\subsection*{\underline{Step1}}
+Compute $\displaystyle\frac{\norm{\cdot}_x'}{\norm{\cdot}_x}$ and $\displaystyle \frac{\norm{\cdot}_a'}{\norm{\cdot}_a}$.
+
+We know that 
+\begin{equation*}
+\begin{aligned}
+&c_1\left(\mathcal{O}_C,\frac{\norm{\cdot}_a'}{\norm{\cdot}_a} \cdot \left(\frac{\norm{\cdot}_x'}{\norm{\cdot}_x} \right)^{-(2g-2)}\right)\\
+  =\;&c_1\Big(\omega_C,\norm{\cdot}_a'\Big)-c_1\Big(\omega_C,\norm{\cdot}_a\Big)-(2g-2)c_1\Big(\mathcal{O}(x_0),\norm{\cdot}_{x_0}'\Big)+ (2g-2)c_1\Big(\mathcal{O}(x_0),\norm{\cdot}_{x_0}\Big) \\
+    =\;& 0  \\ 
+\end{aligned}
+\end{equation*}
+By the non-Archimedean Calabi theorem, we get $\displaystyle \frac{\norm{\cdot}_a'}{\norm{\cdot}_a} \cdot \left(\frac{\norm{\cdot}_x'}{\norm{\cdot}_x} \right)^{-(2g-2)}$ is a constant, we get
+$$\frac{\norm{\cdot}_a'}{\norm{\cdot}_a}=e^{(2g-2)\varphi+c_1}$$
+where $c_1$ is a constant number. Similarly, one can write
+$$\frac{\norm{\cdot}_x'}{\norm{\cdot}_x}=e^{\varphi+\psi(x)}$$
+where $\psi:C^{an} \longrightarrow \mathbb{R}$ is a "constant number depending on $x$".
+\subsection*{\underline{Step2}}
+By the symmetric property, we get $\psi-\varphi\equiv c_2$ is an constant function. We compute
+$$
+  g_{\Delta,a}'(x,y)-g_{\Delta,a}(x,y)= g_x'(y)-g_x(y)   =-\log \frac{\norm{1}_x(y)}{\norm{1}_x'(y)}=-\psi(x)-\phi(y)
+$$
+thus
+$$-\psi(x)-\varphi(y)=-\psi(y)-\varphi(x) \quad\Longrightarrow\quad \psi(x)-\varphi(x)=\psi(y)-\varphi(y)$$
+\subsection*{\underline{Step3}}
+We show that $\varphi \equiv c_2$ is also a constant. By the following commutative diagram, we can pullback metrized line bundle $(\mathcal{O}_{C^2}(\Delta), \norm{\cdot}_{\Delta})$ in two ways, and should get the same metrized line bundle.
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoBGAXVJADcBDAGwFcYkQBhEAX1PU1z5CKAMwVqdJq3YcAOrLwBbeAAIuvftjwEiZAAwSGLNohAAKeRGUBzegH0OAPWDzaMGL3mQATopeyAYygIHG47emcAWnJuAEoePhAMLSEiMQMaI2lTC1lFehwACwCmYAB5MOAnYm5cgBEYRhx6WNIvCF9-IJDK+Qam+lJ6OITNQR0UclJiQykTc3l8opLGcrCOMwAPVvbO+W7Qu23RpIFtYWQpkVnjGRPk8Yu9UmvMufZNngkYKGt4IlAADNvFYkM8QDgIEgppJbqY+o1midgaDEGQIVDEODCjB6FB2JAwGwNCAUYokGIMdCaDi8QSCMTEmSkABWGiQ6mw7LmTZtWQASSg8RJzMQABZ2Zi2SBafjTITGUCQeTEAA2SWst5wkCfEXKpDqqlYrXc3WUbhAA
+\begin{tikzcd}[row sep={12mm,between origins}, column sep={30mm,between origins}]
+&&[-20mm] {(\omega_C^{\vee},\norm{\cdot}_a^{-1})} \arrow[d, no head] & {(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})} \arrow[d, no head] \\
+  && C \arrow[r, "\Delta"]     & C\times C        \\[-5mm]
+  &|[fill=white]| {(\mathcal{O}_C(x),\norm{\cdot}_x)} \arrow[d, no head] &    &                  \\
+x \arrow[r, "x"] \arrow[rruu, "x"{pos=0.3}] & C \arrow[rruu, "{(x,\Id)}"',end anchor={[xshift=-1ex]south}]                            &    &                 
+\end{tikzcd}
+\end{center}
+We get
+\subsection*{\underline{Step4}}
+
 \section{existence--unfinished}\label{sec:existence}
 \bibliographystyle{plain}
 \bibliography{reference}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 NOV 2021 00:18
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 NOV 2021 18:29
 entering extended mode
 **./Zhang_metric.tex
 (Zhang_metric.tex
@@ -860,14 +860,23 @@ ABD: EveryShipout initializing macros (Zhang_metric.toc)
 \openout5 = `Zhang_metric.toc'.
 
  [1] [2] [3]
-(Zhang_metric.bbl) [4] (Zhang_metric.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
+
+ []
+
+[4] (Zhang_metric.bbl) [5] [6] (Zhang_metric.aux) ) 
 Here is how much of TeX's memory you used:
- 17000 strings out of 427748
- 317922 string characters out of 3150981
- 431748 words of memory out of 3000000
- 20526 multiletter control sequences out of 15000+200000
+ 17091 strings out of 427748
+ 320153 string characters out of 3150981
+ 430832 words of memory out of 3000000
+ 20617 multiletter control sequences out of 15000+200000
  17453 words of font info for 82 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,17n,82p,3261b,1049s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Zhang_metric.pdf (4 pages).
+Output written on Zhang_metric.pdf (6 pages).
