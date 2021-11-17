@@ -19,6 +19,7 @@
 \usepackage[a4paper,left=3cm,right=3cm]{geometry}
 \usepackage[table,xcdraw]{xcolor} % before tikz-cd
 \usepackage{tikz-cd}
+\usepackage{hyperref}
 %\usepackage[notcite,notref]{showkeys}
 
 % showkeys  make label explicit on the paper
@@ -74,7 +75,8 @@
 \DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
 \DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
 \DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
-
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
 \newcommand{\Spec}{\operatorname{Spec}}
 \DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
 \DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
@@ -107,7 +109,7 @@ Bonn, 53115\\ Germany\\}
 
 
 
-
+\setcounter{tocdepth}{1}
 \maketitle
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -300,20 +302,105 @@ $$
 thus
 $$-\psi(x)-\varphi(y)=-\psi(y)-\varphi(x) \quad\Longrightarrow\quad \psi(x)-\varphi(x)=\psi(y)-\varphi(y)$$
 \subsection*{\underline{Step3}}
-We show that $\varphi \equiv c_2$ is also a constant. By the following commutative diagram, we can pullback metrized line bundle $(\mathcal{O}_{C^2}(\Delta), \norm{\cdot}_{\Delta})$ in two ways, and should get the same metrized line bundle.
+We show that $\varphi$ is also a constant. By the following commutative diagram, we can pullback metrized line bundle $(\mathcal{O}_{C^2}(\Delta), \norm{\cdot}_{\Delta})$ in two ways, and should get the same metrized line bundle.
 \begin{center}
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZAJgBoBGAXVJADcBDAGwFcYkQBhEAX1PU1z5CKAMwVqdJq3YcAOrLwBbeAAIuvftjwEiZAAwSGLNohAAKeRGUBzegH0OAPWDzaMGL3mQATopeyAYygIHG47emcAWnJuAEoePhAMLSEiMQMaI2lTC1lFehwACwCmYAB5MOAnYm5cgBEYRhx6WNIvCF9-IJDK+Qam+lJ6OITNQR0UclJiQykTc3l8opLGcrCOMwAPVvbO+W7Qu23RpIFtYWQpkVnjGRPk8Yu9UmvMufZNngkYKGt4IlAADNvFYkM8QDgIEgppJbqY+o1midgaDEGQIVDEODCjB6FB2JAwGwNCAUYokGIMdCaDi8QSCMTEmSkABWGiQ6mw7LmTZtWQASSg8RJzMQABZ2Zi2SBafjTITGUCQeTEAA2SWst5wkCfEXKpDqqlYrXc3WUbhAA
 \begin{tikzcd}[row sep={12mm,between origins}, column sep={30mm,between origins}]
 &&[-20mm] {(\omega_C^{\vee},\norm{\cdot}_a^{-1})} \arrow[d, no head] & {(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})} \arrow[d, no head] \\
   && C \arrow[r, "\Delta"]     & C\times C        \\[-5mm]
   &|[fill=white]| {(\mathcal{O}_C(x),\norm{\cdot}_x)} \arrow[d, no head] &    &                  \\
-x \arrow[r, "x"] \arrow[rruu, "x"{pos=0.3}] & C \arrow[rruu, "{(x,\Id)}"',end anchor={[xshift=-1ex]south}]                            &    &                 
+x \arrow[r, "x"] \arrow[rruu, "x"{pos=0.3},shorten <=32mm]\arrow[rruu,no head, shorten >=19mm] & C \arrow[rruu, "{(x,\Id)}"',end anchor={[xshift=-1ex]south}]                            &    &                 
 \end{tikzcd}
 \end{center}
 We get
+\begin{equation*}
+\begin{aligned}
+& \norm{\Delta^* s}_a^{-1}=\norm{(x,\Id)^* s}_x \qquad \text{ where $s$ is the section of $\mathcal{O}_{C^2}(\Delta)$ in general place}\\
+  \Longrightarrow\;& \frac{\norm{\cdot}_a'(x)}{\norm{\cdot}_a(x)}\cdot \frac{\norm{\cdot}_x'(x)}{\norm{\cdot}_x(x)} \equiv 1\\ 
+  \Longrightarrow\;&
+  e^{(2g-2)\varphi(x)+c_1} \cdot e^{2\varphi(x)+c_2} \equiv 1
+\end{aligned}
+\end{equation*}
+So $\varphi$ is a constant.
 \subsection*{\underline{Step4}}
+Suppose $\norm{\cdot}_x'=c_3\norm{\cdot}_x$, then $c_3=1$.
 
-\section{existence--unfinished}\label{sec:existence}
+We use the normalization as follows:
+\begin{equation*}
+\begin{aligned}
+0  =\;& \int_{C^{an}}-\log \norm{\cdot}_x' \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x')\\ 
+  =\;& \int_{C^{an}}-\log \norm{\cdot}_x \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x) -\log c_3 \\ 
+  =\;&  -\log c_3 \\ 
+\end{aligned}
+\end{equation*}
+so $\norm{\cdot}_x'=\norm{\cdot}_x$, we get finally $\norm{\cdot}_{\Delta,a}'=\norm{\cdot}_{\Delta,a}$.
+
+\section{admissible metric over $C^{an}$}\label{sec:existence}
+
+For the existence part of the main theorem, one should define the "admissibility" of the metric. We will see that the admissable metric exists and is unique up to the multiplication of an constant. Thus the proof can be divided into two parts:
+\begin{itemize}
+\item find the admissible metric;
+\item make the normalization.
+\end{itemize}
+Still, it's not easy to define and construct the admissable metric over the curve. Actually, we first define the admissible metric over the Abelian variety, and then embed the curve into its Jacobian to get the "admissibility" property.
+
+\begin{defn}[admissible metric over Abelian variety]
+Let $(L,\norm{\cdot}_L)$ be the metrized line bundle over the Abelian variety $A$. We define the admissibility step by step:
+\begin{itemize}
+\item  when $L$ is even, i.e. $[-1]^*L\cong L$, we get $[2]^*L\cong L^{\otimes 4}$. the norm $\norm{\cdot}_L$ is called admissible when this isomorphism induces the isomorphism of metrized line bundle, i.e.
+$$[2]^*(L,\norm{\cdot}_L)\cong (L,\norm{\cdot}_L)^{\otimes 4};$$ 
+\item  when $L$ is odd, i.e. $[-1]^*L\cong L^{\vee}$, we get $[2]^*L\cong L^{\otimes 2}$. the norm $\norm{\cdot}_L$ is called admissible when this isomorphism induces the isomorphism of metrized line bundle, i.e.
+$$[2]^*(L,\norm{\cdot}_L)\cong (L,\norm{\cdot}_L)^{\otimes 2};$$ 
+\item In general, $\norm{\cdot}_L$ is admissible if and only if the induced metric on $L \otimes [-1]^*L$ and $L \otimes ([-1]^*L)^{\vee}$ are both admissible.
+\end{itemize}
+\end{defn}
+\begin{remark}
+Fix the line bundle $L$ over $A$, the admissible metric over $L$ exists and is unique(up to a constant) by the Tate's limiting argument. In some sense, you take the average of the metric again and again, and finally you'll get the "most averaged" metric, which is now called the "admissible metric".
+\end{remark}
+\begin{proposition}
+If the metrized line bundle $(L,\norm{\cdot})$ over $A$ is admissible, then $(L,\norm{\cdot})$ is integrable.
+\end{proposition}
+\begin{remark}
+The admissibility is also compatible with the group stucture of Picard group.
+\end{remark}
+Now we can define the admissibility over curve.
+\begin{defn}[admissible metric over curve]
+Fix $\alpha \in \Pic^1(C)$, it induce an embedding $i_{\alpha}:C \hookrightarrow J:=\Jac(C)$ and also a theta divisor $\theta_{\alpha}$ over $J$.\footnote{Remember that our curve is of genus $g>0$.} 
+
+The metrized line bundle $(L,\norm{\cdot}_L)$ over the curve $C^{an}$ is called admissible if there exists an metrized line bundle $(M,\norm{\cdot}_M)$ over $J$, such that 
+\begin{itemize}
+\item $(M,\norm{\cdot}_M)$ is admissible;
+\item $M$ is algebraic equivalent to $\mathcal{O}_J(n\theta_{\alpha})$;
+\item There exists $m \in \mathbb{Z}_{>0}$, such that $$i_{\alpha}^*(M,\norm{\cdot}_M) \cong (L,\norm{\cdot}_L)^{\otimes m}.$$
+\end{itemize}
+\end{defn}
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQAZEAX1PU1z5CKcqQBM1Ok1bsAwjz4gM2PASJiKkhizaIQAWQX8VQogGZxW6bpAApI0oGrhyACyaa2mXoA6PgLb0OAAWAMZMwADy3AD6tgAUYH4hMDj0McB+TGjB9NwAlA7KgmooGsRWOux+kABO-pk+oVAQOLGGvMYlLmQVntbVPnUNfs2tsVzckjBQAObwRKAAZrUQ-khkIDgQSKIgwTD0UOyQYGydICtruzTbSBZSVXpYGVmMOXkOV+uIGls7iAejHoACMYIwAApOUx6RgwJY4EA0A5HE4Ec6Kb5Idz-e7Iw7HPSnDHLVY-ABstwBmxRhPA6K+ZKQAFYqUg-rS0WceJRuEA
+\begin{tikzcd}[column sep=0mm, row sep=3mm]
+\norm{\cdot}_L \arrow[d, no head] & [-3mm]                           & \norm{\cdot}_M \arrow[d, no head] &[-3mm]   &                                                     \\
+L \arrow[rd, no head]             &                            & M \arrow[rr, draw=none, "\sim"{description}]\arrow[rd, no head]             &   & \mathcal{O}_J(n\theta_{\alpha}) \arrow[ld, no head] \\
+& C \arrow[rr, "i_{\alpha}"] &                                & J&                                                    
+\end{tikzcd}
+\end{center}
+\begin{remark}
+Fix the line bundle $L$ over $C$, the admissible metric over $L$ exists and is unique(up to a constant). For the uniqueness we can refer to the non-Archimedean Calabi theorem, but I'm still not sure how to prove the existence. Maybe you'll find the answer \href{http://qirui.li/main.pdf}{here}.
+\end{remark}
+\begin{remark}
+The definition of admissible is well-defined, i.e. doesn't depend on the choice of $\alpha \in \Pic^1(C)$. It's stable under the base change(when we assume $K=\bar{K}$ I guess we don't need this property) and compatible with the group structure in $\Pic(C)$.
+\end{remark}
+The following proposition gives the key property of admissible metric over curve $C$. In some sense, this property describe the admissible metric in intrinsic way.
+\begin{proposition}
+There exists an unique probability measure $d\mu_{\alpha}$ over $C^{an}$ such that for any metrized line bundle $(L,\norm{\cdot}_L)$ over $C^{an}$,
+$$\norm{\cdot}_L \text{ is admissible } \iff \begin{aligned}
+&\hspace{0.3cm}\norm{\cdot}_L \text{ is integrable}\\
+&\hspace{1.5cm}+\\
+& c_1(L,\norm{\cdot}_L)= \deg (L) d\mu_{\alpha}
+\end{aligned}$$
+\end{proposition}
+The next lemma give the explicit construction of metrized line bundle $(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})'$, and we will see that this is nearly the desired metrized line bundle.
+\begin{lemma}
+Do it tomorrow!
+\end{lemma}
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}

@@ -1,12 +1,12 @@
-\contentsline {section}{\tocsection {}{1}{Berkovich space}}{1}% 
-\contentsline {section}{\tocsection {}{2}{metric and measure}}{1}% 
-\contentsline {subsection}{\tocsubsection {}{2.1}{metric of line bundle}}{2}% 
-\contentsline {subsection}{\tocsubsection {}{2.2}{Chambert-Loir measure}}{3}% 
-\contentsline {section}{\tocsection {}{3}{statement of the main theorem}}{3}% 
-\contentsline {section}{\tocsection {}{4}{uniqueness}}{4}% 
-\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{5}% 
-\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{5}% 
-\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{5}% 
-\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step4}}\mathsurround \z@ $\relax }}{5}% 
-\contentsline {section}{\tocsection {}{5}{existence--unfinished}}{6}% 
-\contentsline {section}{\tocsection {}{}{References}}{6}% 
+\contentsline {section}{\tocsection {}{1}{Berkovich space}}{1}{section.1}% 
+\contentsline {section}{\tocsection {}{2}{metric and measure}}{1}{section.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{metric of line bundle}}{1}{subsection.2.1}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Chambert-Loir measure}}{2}{subsection.2.2}% 
+\contentsline {section}{\tocsection {}{3}{statement of the main theorem}}{3}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{uniqueness}}{4}{section.4}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{4}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{5}{section*.3}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{5}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step4}}\mathsurround \z@ $\relax }}{6}{section*.5}% 
+\contentsline {section}{\tocsection {}{5}{admissible metric over $C^{an}$}}{6}{section.5}% 
+\contentsline {section}{\tocsection {}{}{References}}{7}{section*.6}% 

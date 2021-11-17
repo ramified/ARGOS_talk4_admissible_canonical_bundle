@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 NOV 2021 18:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 NOV 2021 00:31
 entering extended mode
 **./Zhang_metric.tex
 (Zhang_metric.tex
@@ -782,45 +782,178 @@ File: pgflibraryarrows.meta.code.tex 2019/01/05 v3.1 (3.1)
 \pgfarrowwidth=\dimen275
 \pgfarrowlinewidth=\dimen276
 )))
-\c@theorem=\count146
-\c@thmsub=\count147
-\c@remarks=\count148
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\h
+yperref.sty"
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\a
+uxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\k
+voptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen277
+\Hy@linkcounter=\count146
+\Hy@pagecounter=\count147
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\p
+d1enc.def"
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count148
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\h
+yperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count149
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.st
+y"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen278
+\Fld@menulength=\count150
+\Field@Width=\dimen279
+\Fld@charsize=\dimen280
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count151
+\c@Item=\count152
+\c@Hfootnote=\count153
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\h
+xetex.def"
+File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\p
+uenc.def"
+File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\stringenc.sty"
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box75
+\c@Hy@AnnotLevel=\count154
+\HyField@AnnotCount=\count155
+\Fld@listcount=\count156
+\c@bookmark@seq@number=\count157
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\r
+erunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip58
+)
+\c@theorem=\count158
+\c@thmsub=\count159
+\c@remarks=\count160
  (Zhang_metric.aux)
 \openout1 = `Zhang_metric.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Try loading font information for U+msa on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Try loading font information for U+msa on input line 96.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 94.
+LaTeX Font Info:    Try loading font information for U+msb on input line 96.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 94.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 96.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 94.
+Package xypdf Info: Line width: 0.43799pt on input line 96.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -855,28 +988,76 @@ Package xypdf Info: Line width: 0.43799pt on input line 94.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-ABD: EveryShipout initializing macros (Zhang_metric.toc)
-\tf@toc=\write5
-\openout5 = `Zhang_metric.toc'.
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box76
+Package hyperref Info: Link coloring OFF on input line 96.
 
- [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
+ameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count161
+)
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
+ (Zhang_metric.out) (Zhang_metric.out)
+\@outlinefile=\write5
+\openout5 = `Zhang_metric.out'.
+
+ (Zhang_metric.toc)
+\tf@toc=\write6
+\openout6 = `Zhang_metric.toc'.
+
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\se-ascii-print.def"
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+) [1] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
 
  []
 
-[4] (Zhang_metric.bbl) [5] [6] (Zhang_metric.aux) ) 
+[4] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 338.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 338.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 338.
+
+[6] (Zhang_metric.bbl) [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+ (Zhang_metric.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 406.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+Package rerunfilecheck Info: File `Zhang_metric.out' has not changed.
+(rerunfilecheck)             Checksum: 1942E80B8F7D304DF8B8DE0A72AD788F.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+ ) 
 Here is how much of TeX's memory you used:
- 17091 strings out of 427748
- 320153 string characters out of 3150981
- 430832 words of memory out of 3000000
- 20617 multiletter control sequences out of 15000+200000
- 17453 words of font info for 82 fonts, out of 3000000 for 9000
+ 24426 strings out of 427748
+ 424501 string characters out of 3150981
+ 544093 words of memory out of 3000000
+ 27902 multiletter control sequences out of 15000+200000
+ 17821 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,17n,82p,3261b,1049s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,82p,3261b,1057s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Zhang_metric.pdf (6 pages).
+Output written on Zhang_metric.pdf (7 pages).
