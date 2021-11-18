@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 NOV 2021 00:31
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 NOV 2021 11:46
 entering extended mode
 **./Zhang_metric.tex
 (Zhang_metric.tex
@@ -1041,23 +1041,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 338.
 
-[6] (Zhang_metric.bbl) [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+[6] [7] (Zhang_metric.bbl) [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
  (Zhang_metric.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 406.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
 Package rerunfilecheck Info: File `Zhang_metric.out' has not changed.
 (rerunfilecheck)             Checksum: 1942E80B8F7D304DF8B8DE0A72AD788F.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
- 24426 strings out of 427748
- 424501 string characters out of 3150981
- 544093 words of memory out of 3000000
- 27902 multiletter control sequences out of 15000+200000
+ 24610 strings out of 427748
+ 428960 string characters out of 3150981
+ 556682 words of memory out of 3000000
+ 28086 multiletter control sequences out of 15000+200000
  17821 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,17n,82p,3261b,1057s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Zhang_metric.pdf (7 pages).
+Output written on Zhang_metric.pdf (8 pages).

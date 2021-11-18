@@ -114,7 +114,7 @@ Bonn, 53115\\ Germany\\}
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-First of all, I should apologize that I didn't prepare so well for this talk(so I also \LaTeX$\,$ them after the talk). Everythime when I was reading the paper \cite{yuan2021arithmetic}, I felt myself so foolish. Feel free to use the black boxes in the talk. 
+First of all, I should apologize that I didn't prepare so well for this talk(so I also \LaTeX$\,$ them after the talk). Everythime when I was reading the paper \cite{yuan2021arithmetic}, I felt myself so foolish. So feel free to use the black boxes in the talk, and get the general feeling before checking the details.
 
 This note records contents in the talk, so it may contain something showed by Prof. Peter Scholze, not by me. The initial goal of this note is to keep them somewhere, so that some day when the listeners or I want to recapture something in the talk, we can easily get them from this note. Feel free to ask me questions and give me hundreds of typos!
 
@@ -309,7 +309,7 @@ We show that $\varphi$ is also a constant. By the following commutative diagram,
 &&[-20mm] {(\omega_C^{\vee},\norm{\cdot}_a^{-1})} \arrow[d, no head] & {(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})} \arrow[d, no head] \\
   && C \arrow[r, "\Delta"]     & C\times C        \\[-5mm]
   &|[fill=white]| {(\mathcal{O}_C(x),\norm{\cdot}_x)} \arrow[d, no head] &    &                  \\
-x \arrow[r, "x"] \arrow[rruu, "x"{pos=0.3},shorten <=32mm]\arrow[rruu,no head, shorten >=19mm] & C \arrow[rruu, "{(x,\Id)}"',end anchor={[xshift=-1ex]south}]                            &    &                 
+x \arrow[r, "x"] \arrow[rruu, "x"{pos=0.3},shorten <=32mm]\arrow[rruu,no head, shorten >=19mm] & C \arrow[rruu, "{(x,\Id)}"',end anchor={[xshift=-1ex]south}] &    &                 
 \end{tikzcd}
 \end{center}
 We get
@@ -377,9 +377,9 @@ The metrized line bundle $(L,\norm{\cdot}_L)$ over the curve $C^{an}$ is called 
 \begin{center}
 % https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQAZEAX1PU1z5CKcqQBM1Ok1bsAwjz4gM2PASJiKkhizaIQAWQX8VQogGZxW6bpAApI0oGrhyACyaa2mXoA6PgLb0OAAWAMZMwADy3AD6tgAUYH4hMDj0McB+TGjB9NwAlA7KgmooGsRWOux+kABO-pk+oVAQOLGGvMYlLmQVntbVPnUNfs2tsVzckjBQAObwRKAAZrUQ-khkIDgQSKIgwTD0UOyQYGydICtruzTbSBZSVXpYGVmMOXkOV+uIGls7iAejHoACMYIwAApOUx6RgwJY4EA0A5HE4Ec6Kb5Idz-e7Iw7HPSnDHLVY-ABstwBmxRhPA6K+ZKQAFYqUg-rS0WceJRuEA
 \begin{tikzcd}[column sep=0mm, row sep=3mm]
-\norm{\cdot}_L \arrow[d, no head] & [-3mm]                           & \norm{\cdot}_M \arrow[d, no head] &[-3mm]   &                                                     \\
-L \arrow[rd, no head]             &                            & M \arrow[rr, draw=none, "\sim"{description}]\arrow[rd, no head]             &   & \mathcal{O}_J(n\theta_{\alpha}) \arrow[ld, no head] \\
-& C \arrow[rr, "i_{\alpha}"] &                                & J&                                                    
+\norm{\cdot}_L \arrow[d, no head] & [-3mm]& \norm{\cdot}_M \arrow[d, no head] &[-3mm]   &                \\
+L \arrow[rd, no head]             & & M \arrow[rr, draw=none, "\sim"{description}]\arrow[rd, no head]             &   & \mathcal{O}_J(n\theta_{\alpha}) \arrow[ld, no head] \\
+& C \arrow[rr, "i_{\alpha}"] &     & J&               
 \end{tikzcd}
 \end{center}
 \begin{remark}
@@ -397,10 +397,44 @@ $$\norm{\cdot}_L \text{ is admissible } \iff \begin{aligned}
 & c_1(L,\norm{\cdot}_L)= \deg (L) d\mu_{\alpha}
 \end{aligned}$$
 \end{proposition}
-The next lemma give the explicit construction of metrized line bundle $(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})'$, and we will see that this is nearly the desired metrized line bundle.
+The next lemma give the explicit construction of metrized line bundle $(\mathcal{O}_{C^2}(\Delta),\norm{\cdot}_{\Delta,a})'$, and we will see that this is nearly the desired metrized line bundle. For this, we denote the Poincaré line bundle $P$ on $J$ by
+$$P:=-m^*\mathcal{O}_{J}(\theta_{\alpha})+p_1^*\mathcal{O}_{J}(\theta_{\alpha})+p_2^*\mathcal{O}_{J}(\theta_{\alpha})$$
+where $m:J \times J\longrightarrow J$ is the multiplication in the group law of $J$.\footnote{We replace the notation $\oplus$ by the addition for the convenience of both reading and typing. We will also do this in the following lemma.}
+\begin{center}
+		\begin{tikzcd}
+		J \arrow[rd, "{(\Id,\beta)}"] &              & J \\
+		J \arrow[r, "\Delta"]     & J\times J \arrow[ru, "p_1"] \arrow[rd, "p_2"'] \arrow[r, "m"]& J  \\
+		J \arrow[ru, "{(\beta,\Id)}"'] &              & J
+		\end{tikzcd}
+\end{center}
 \begin{lemma}
-Do it tomorrow!
+Consider the canonical line bundles as follows:
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBoBGAXVJADcBDAGwFcYkQAdDgW3pwAsAxk2AB5AL4B9AMIAKAB4BKEONLpMufIRTlSAZmp0mrdtJVqQGbHgJEATBUMMWbRJw4RuMAOb0Z59WstIj1SYidjV3deAWFGMSkAKVlkAFoqAD0AKgACLgEYHD9gLiY0fnpxZVVAzVsUABZSOwiXdkSAyw0bbWQAVjDWkzcuGKERCUlk-P5C4tLGcsrqiys63oA2RxpnYei+cfjJ4GkMu3FZLgARGEYildqeoi2DHcjTPI48LzgcsxqukF6sgAJyDN5tNwABU6ayeKDBLQhe0Sn2+8ByHXEhhgUG88CIoAAZgAnTxIMggHAQJC6ECzehQdiQMBsAGk8mIBxUmmIOkMpluFlsiwc7hIUI8pBNekwRnMggi4lk8WIAZSxAygUK1mdMVILYagDsNG1QsVepVSAAHDRqUgwbL5ebdeyrZq7byQW7OSaNY7dlFZFhJCUOGUKqoQ2GI8tLZy6faPUZISBowsluJ46rE7y-WawMxGIxseIgA
+\begin{tikzcd}[column sep={10mm,between origins}]
+  &  [-3mm]      & [-3mm]   &[3mm] {\mathcal{O}_J([-1]^* \theta_{\alpha})} \arrow[rdd, no head] &                 & \mathcal{O}_J(\theta_{\alpha}) \arrow[ldd, no head] &                  &  &  & P \arrow[dd, no head] \\
+\mathcal{O}_C(x) \arrow[rdd, no head] &        & \omega_C \arrow[ldd, no head] &&                 &                 & \mathcal{O}_{C^2}(\Delta)         &  &  &                       \\[-5mm]
+  &        &    && J \arrow[rrrrr] &                 &                  &  &  & J \times J            \\
+  & C \arrow[rrru, "i_{\alpha}"'] \arrow[rrrrr] &    &&                 &                 & C \times C \arrow[rrru, "{(i_{\alpha},i_{\alpha})}"']\arrow[from=uu, no head, crossing over] &  &  &                      
+\end{tikzcd}
+\end{center}
+We can write down their pullback explicitly:
+\begin{equation}
+\begin{aligned}
+  i_{\alpha}^* \Big(\mathcal{O}_J(\theta_{\alpha}) \Big)\cong\;& \omega_C+(2-g)\alpha  \\ 
+  i_{\alpha}^* \Big(\mathcal{O}_J([-1]^* \theta_{\alpha}) \Big)\cong\;& g\alpha \\   
+  \Delta^* \Big(\mathcal{O}_{C^2}(\Delta) \Big)\cong\;& -\omega_C \\ 
+  (x,\Id)^* \Big(\mathcal{O}_{C^2}(\Delta) \Big)\cong\;& \mathcal{O}_C(x) \\  
+  (i_{\alpha},i_{\alpha})^* \big(P\big)\cong\;&  \mathcal{O}_{C^2}(\Delta)-p_1^*\alpha-p_2^*\alpha\\  
+  \Delta_J^* \big(P\big)\cong\;&-\mathcal{O}_J(\theta_{\alpha})- \mathcal{O}_J([-1]^* \theta_{\alpha}) \\ 
+  (\beta,\Id)^* \big(P\big)\cong\;& -T_{\beta}^*\mathcal{O}_J(\theta_{\alpha})+\mathcal{O}_J(\theta_{\alpha}) \\ 
+\end{aligned}
+\end{equation}
 \end{lemma}
+\begin{proof}[Proof?]
+That's a good exercise for Abelian variety. See \cite[Lemma A.3]{yuan2021arithmetic}.\footnote{If you really check the details, you'll find he refers to Serre's book, and in Serre's book he refers to the Weil's book which is in French and can't be found in the internet. Surprise! I will write down the proof when I fully understand it.}
+\end{proof}
+
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}
