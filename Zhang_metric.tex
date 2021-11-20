@@ -20,6 +20,8 @@
 \usepackage[table,xcdraw]{xcolor} % before tikz-cd
 \usepackage{tikz-cd}
 \usepackage{hyperref}
+\usepackage{scalerel}
+\usepackage{stackengine,wasysym}
 %\usepackage[notcite,notref]{showkeys}
 
 % showkeys  make label explicit on the paper
@@ -93,6 +95,10 @@
 
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
+
+
+% from https://tex.stackexchange.com/questions/63545/big-tilde-in-math-mode
+
 \begin{document}
 \date{}
 
@@ -120,7 +126,7 @@ This note records contents in the talk, so it may contain something showed by Pr
 
 \section{Berkovich space}
 
-I copied some words from \cite[3.1.1]{yuan2021arithmetic} in the talk to give an extremely short introduction to the Berkovich space. 
+I copied some words from \cite[3.1.1]{yuan2021adelic} in the talk to give an extremely short introduction to the Berkovich space. 
 
 Idea: the point of a scheme can be viewed as the map to the field, so is the point of the Berkovich space(the special seminorm). If you have not heard about the Berkovich space, you can replace $X^{an}$ to $X(K)$ in the following sections.
 
@@ -250,7 +256,7 @@ we can also define the Green's functions as follows:
 \begin{defn}[symmetric metric]
 The metric $\norm{\cdot}_{\Delta}$ over line bundle $\mathcal{O}_{C^2}(\Delta)$ is symmetric if the corresponding Green's function $g_{\Delta}(x,y)$ is symmetric.
 \end{defn}
-In the following pages, when the norm  $\norm{\cdot}_{\Delta}$ is special, we would replace the notations $\norm{\cdot}_{\Delta}$ by $\norm{\cdot}_{\Delta,a}$, $\norm{\cdot}_{\omega_C}$ by $\norm{\cdot}_{a}$, $\norm{\cdot}_{\mathcal{O}_C(x)}$ by $\norm{\cdot}_{x}$ and $g_{\Delta}$ by $g_{\Delta,a}$. \footnote{Here the letter $a$ means "admissible". We will define the "admissible metric" over curve on Section\ref{sec:existence}, and actually "admissible metric" over $\mathcal{O}_{C^2}(\Delta)$ is defined in \cite[???]{yuan2021arithmetic}.}
+In the following pages, when the norm  $\norm{\cdot}_{\Delta}$ is special, we would replace the notations $\norm{\cdot}_{\Delta}$ by $\norm{\cdot}_{\Delta,a}$, $\norm{\cdot}_{\omega_C}$ by $\norm{\cdot}_{a}$, $\norm{\cdot}_{\mathcal{O}_C(x)}$ by $\norm{\cdot}_{x}$ and $g_{\Delta}$ by $g_{\Delta,a}$. \footnote{Here the letter $a$ means "admissible". We will define the "admissible metric" over curve on Section\ref{sec:existence}, and actually "admissible metric" over $\mathcal{O}_{C^2}(\Delta)$ is defined in \cite[Appendix A.3, p79]{yuan2021arithmetic}.}
 \\
 \\
 
@@ -267,7 +273,7 @@ Suppose $K=\bar{K}$.\footnote{It's not an essential condition, we just don't wan
 \end{equation*}
 as the Chambert-Loir measure;
 \item (normalization) We always have the equality
-$$\int_{(C)^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
+$$\int_{C^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
 \end{enumerate}
 We will call this metric $\norm{\cdot}_{\Delta,a}$ and its induced metric $\norm{\cdot}_{a}$ as the Zhang's metric.
 \end{theorem}
@@ -328,8 +334,8 @@ Suppose $\norm{\cdot}_x'=c_3\norm{\cdot}_x$, then $c_3=1$.
 We use the normalization as follows:
 \begin{equation*}
 \begin{aligned}
-0  =\;& \int_{C^{an}}-\log \norm{\cdot}_x' \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x')\\ 
-  =\;& \int_{C^{an}}-\log \norm{\cdot}_x \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x) -\log c_3 \\ 
+0  =\;& \int_{C^{an}}-\log \norm{1}_x'(-) \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x')\\ 
+  =\;& \int_{C^{an}}-\log \norm{1}_x(-) \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x) -\log c_3 \\ 
   =\;&  -\log c_3 \\ 
 \end{aligned}
 \end{equation*}
@@ -361,7 +367,9 @@ Fix the line bundle $L$ over $A$, the admissible metric over $L$ exists and is u
 If the metrized line bundle $(L,\norm{\cdot})$ over $A$ is admissible, then $(L,\norm{\cdot})$ is integrable.
 \end{proposition}
 \begin{remark}
-The admissibility is also compatible with the group stucture of Picard group.
+The admissibility is also compatible with the group stucture of Picard group. Fix $\beta_0 \in A$, then the admissibility is also compatible with the translation map
+$$T_{\beta_0}: A\longrightarrow A \qquad \beta \longmapsto \beta+\beta_0;$$
+that means, once we have the admissible metrized line bundle $(L,\norm{\cdot}_L)$ over $A$, then the induced metrized line bundle $T_{\beta_0}^{*}(L,\norm{\cdot}_L)$ is also admissible.
 \end{remark}
 Now we can define the admissibility over curve.
 \begin{defn}[admissible metric over curve]
@@ -419,22 +427,60 @@ Consider the canonical line bundles as follows:
 \end{tikzcd}
 \end{center}
 We can write down their pullback explicitly:
-\begin{equation}
-\begin{aligned}
+\begin{subequations}
+\begin{alignat}{1}
   i_{\alpha}^* \Big(\mathcal{O}_J(\theta_{\alpha}) \Big)\cong\;& \omega_C+(2-g)\alpha  \\ 
-  i_{\alpha}^* \Big(\mathcal{O}_J([-1]^* \theta_{\alpha}) \Big)\cong\;& g\alpha \\   
+  i_{\alpha}^* \Big(\mathcal{O}_J([-1]^* \theta_{\alpha}) \Big)\cong\;& g\alpha \\   \label{subeq:alpha}
   \Delta^* \Big(\mathcal{O}_{C^2}(\Delta) \Big)\cong\;& -\omega_C \\ 
   (x,\Id)^* \Big(\mathcal{O}_{C^2}(\Delta) \Big)\cong\;& \mathcal{O}_C(x) \\  
-  (i_{\alpha},i_{\alpha})^* \big(P\big)\cong\;&  \mathcal{O}_{C^2}(\Delta)-p_1^*\alpha-p_2^*\alpha\\  
+  (i_{\alpha},i_{\alpha})^* \big(P\big)\cong\;&  \mathcal{O}_{C^2}(\Delta)-p_1^*\alpha-p_2^*\alpha\\ \label{subeq:delta} 
   \Delta_J^* \big(P\big)\cong\;&-\mathcal{O}_J(\theta_{\alpha})- \mathcal{O}_J([-1]^* \theta_{\alpha}) \\ 
-  (\beta,\Id)^* \big(P\big)\cong\;& -T_{\beta}^*\mathcal{O}_J(\theta_{\alpha})+\mathcal{O}_J(\theta_{\alpha}) \\ 
-\end{aligned}
-\end{equation}
+  (\beta,\Id)^* \big(P\big)\cong\;& -T_{\beta}^*\mathcal{O}_J(\theta_{\alpha})+\mathcal{O}_J(\theta_{\alpha}) 
+\end{alignat}
+\end{subequations}
 \end{lemma}
+
 \begin{proof}[Proof?]
 That's a good exercise for Abelian variety. See \cite[Lemma A.3]{yuan2021arithmetic}.\footnote{If you really check the details, you'll find he refers to Serre's book, and in Serre's book he refers to the Weil's book which is in French and can't be found in the internet. Surprise! I will write down the proof when I fully understand it.}
 \end{proof}
 
+Since $J$ is Abelian varietie, we have the admissible metrics on the line bundles $\mathcal{O}_J(\theta_{\alpha})$ and $\mathcal{O}_J([-1]^* \theta_{\alpha})$. By pulling back we get the metrics over $P$. From the formula \eqref{subeq:alpha} and \eqref{subeq:delta}, we get the metrics over $g\alpha$ and $\mathcal{O}_{C^2}(\Delta)-p_1^*\alpha-p_2^*\alpha$. Step by step, we get metrics over $\alpha$, $p_1^*\alpha$, $p_2^*\alpha$ and finally the metric $\norm{\cdot}_{\Delta,\alpha}'$ over $\mathcal{O}_{C^2}(\Delta)$.
+\begin{claim}
+The induced metric $\norm{\cdot}_a'$ and $\norm{\cdot}_x'$ from $\norm{\cdot}_{\Delta,\alpha}'$ are admissible.
+\end{claim}
+\begin{proof}[Proof of the claim]
+This follows from the tedious diagram chasing. For example,\footnote{Be careful that we also denote
+$$x:C\longrightarrow C \qquad i_{\alpha}(x):J\longrightarrow J \qquad \widetilde{i_{\alpha}(x)}:C\longrightarrow J$$ 
+for the constant map in the obvious way.}
+\begin{equation*}
+\begin{aligned}
+ \mathcal{O}_C(x) =\;& (x,\Id)^* \Big(\mathcal{O}_{C^2}(\Delta) \Big) \\ 
+  =\;& (x,\Id)^* \Big(\mathcal{O}_{C^2}(\Delta)-p_1^*\alpha-p_2^*\alpha \Big)+(x,\Id)^* p_1^*\alpha+(x,\Id)^* p_2^*\alpha \\ 
+  =\;& (x,\Id)^*(i_{\alpha},i_{\alpha})^* \big(P\big) +x^*(\alpha) +\alpha \\ 
+  =\;& i_{\alpha}^* \big( i_{\alpha}(x),\Id\!\big)^*P+x^*(\alpha) +\alpha\\ 
+  =\;& i_{\alpha}^* \big( i_{\alpha}(x),\Id \!\big)^*\Big(\hspace{-1mm}-m^*\mathcal{O}_{J}(\theta_{\alpha})+p_1^*\mathcal{O}_{J}(\theta_{\alpha})+p_2^*\mathcal{O}_{J}(\theta_{\alpha})\Big)+x^*(\alpha) +\alpha \\ 
+  =\;& i_{\alpha}^* \Big(\hspace{-1mm}-T_{i_{\alpha(x)}}^*\mathcal{O}_{J}(\theta_{\alpha})+i_{\alpha}(x)^*\mathcal{O}_{J}(\theta_{\alpha})+\mathcal{O}_{J}(\theta_{\alpha})\Big)+x^*(\alpha) +\alpha \\ 
+  =\;& -i_{\alpha}^* \Big(T_{i_{\alpha(x)}}^*\mathcal{O}_{J}(\theta_{\alpha})\Big)+ \widetilde{i_{\alpha}(x)}^*\Big(\mathcal{O}_{J}(\theta_{\alpha})\Big)+i_{\alpha}^* \Big(\mathcal{O}_{J}(\theta_{\alpha})\Big)+x^*(\alpha) +\frac{1}{g} \,i_{\alpha}^* \Big(\mathcal{O}_J([-1]^* \theta_{\alpha}) \Big) \\ 
+\end{aligned}
+\end{equation*}
+The line bundles $\widetilde{i_{\alpha}(x)}^*\Big(\mathcal{O}_{J}(\theta_{\alpha})\Big)$ and $x^*(\alpha)$ are both trivial line bundles with constant metric, and the other terms are pullback from the admissible metrized line bundles, we get that $\norm{\cdot}_x'$ is admissible. The similar argument applies to the metric $\norm{\cdot}_{a}'$.
+\end{proof}
+\begin{corollary}
+We get the equations
+$$c_1(\mathcal{O}(x),\norm{\cdot}_x')=d\mu_a \qquad c_1\Big(\omega_C,\norm{\cdot}_a'\Big)=(2g-2)d\mu_a.$$
+Thus we get 
+\begin{equation*}
+\begin{aligned}
+  c_1(\mathcal{O}(x),\norm{\cdot}_x')&=c_1(\mathcal{O}(y),\norm{\cdot}_y')  \\ 
+  (2g-2)c_1(\mathcal{O}(x),\norm{\cdot}_x')&=c_1(\omega_C,\norm{\cdot}_a')  \\ 
+\end{aligned}
+\end{equation*}
+as the Chambert-Loir measures.
+\end{corollary}
+
+Now we have to do the normalization. Actually it reduces to prove that the expression
+$$\int_{C^{an}}-\log \norm{1}_x'(-) \cdot c_1(\mathcal{O}(x),\norm{\cdot}_x')$$
+is an constant number unrelated to $x$. By proving this, we have to use the Deligne pairing, but I haven't worked out the details though.
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}
