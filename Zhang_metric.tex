@@ -130,13 +130,13 @@ I copied some words from \cite[3.1.1]{yuan2021adelic} in the talk to give an ext
 
 Idea: the point of a scheme can be viewed as the map to the field, so is the point of the Berkovich space(the special seminorm). If you have not heard about the Berkovich space, you can replace $X^{an}$ to $X(K)$ in the following sections.
 
-\section{metric and measure}
+\section{Metric and measure}
 For the statement of the main theorem, one should introduce concepts of metric (over a line bundle) and measure (over a Berkovich space).
 
-\subsection{metric of line bundle}
+\subsection{Metric of line bundle}
 Recall that when we learn Riemann metric, we first define it fiberwise, then localwise, and finally globalwise. In today's talk we also define it similarly.
 
-\begin{defn}[fiber of line bundle over a Berkovich space]
+\begin{defn}[Fiber of line bundle over a Berkovich space]
 Fix the scheme $X/K$ and the line bundle $L$ over $X$. the fiber of $L$ at point $x \in X^{an}$ is defined as
 $$L^{an}(x):= H_x \otimes_{\kappa(\bar{x}) }L(\bar{x}).$$
 where $H_x$ is the residue field of $x$.
@@ -151,12 +151,12 @@ L^{an}(x) \arrow[dd, no head]   &            & L(\bar{x}) \arrow[dd, no head]   
 \end{tikzcd}
 
 \end{center}
-\begin{defn}[metric pointwise]
+\begin{defn}[Metric pointwise]
 We define the metric of line bundle $L$ at $x \in X^{an}$ as the norm of $H_x$-modules $L^{an}(x)$:
 $$\norm{\cdot}(x):L^{an}(x) \longrightarrow \mathbb{R}_{>0} \qquad \text{such that }\norm{fs}(x)=|f|_{H_x} \cdot\norm{s}(x) $$
 %\text{ for any $f \in H_x$, $s \in L^{an}(x)$}
 \end{defn}
-\begin{defn}[metric globalwise]
+\begin{defn}[Metric globalwise]
 The metric of line bundle $L$ is defined as the collections of metrics (at every point) such that the metrics vary in a continuous way. Equivalently,
 $$\norm{\cdot}=\left\{ \norm{\cdot}(x)\, \middle|\, x\in X^{an} \text{ + cont} \right\}$$
 where the continuity means for any open subset $U$ of $X$, any section $s \in \Gamma(U)$, the norm map
@@ -177,7 +177,7 @@ the inverse and the identity is also easily defined;
 \end{enumerate} 
 \end{proposition}
 \begin{remark}
-By this definition it's not easy to define integrable metric (or semipositive metric). By translating the metrized line bundles as the adelic line bundles, we can define integrable(it's already done in Talk 3).
+By this definition it's not easy to define integrable metric (or semipositive metric). By translating the metrized line bundles as the adelic line bundles, we can define integrable (it's already done in Talk 3).
 \end{remark}
 Here the Prof. Peter Scholze explains how to translate the metrized line bundles as the adelic line bundles:
 
@@ -201,13 +201,13 @@ Notice that on curve $C/\mathbb{C}$, the $(1,1)$-form can be viewed as the measu
    &c_1(L^{\vee},\norm{\cdot})=-c_1(L,\norm{\cdot}^{-1}),\quad\quad c_1(\mathcal{O}_C,\norm{\cdot}_{const})=0.
 \end{aligned}
 \end{equation*}
-\item (non-Archimedean Calabi theorem) Let $\norm{\cdot}$ be an integrable metric on $\mathcal{O}_C$, then
+\item (Non-Archimedean Calabi theorem) Let $\norm{\cdot}$ be an integrable metric on $\mathcal{O}_C$, then
 $$c_1(\mathcal{O}_C,\norm{\cdot})=0 \iff \norm{\cdot} \equiv C_0 \quad \text{ for some constant $C_0$}\hspace{-3cm}$$
-\item (normalization) let $(L,\norm{\cdot})$ be a metrized line bundle of degree $d$, then
+\item (Normalization) let $(L,\norm{\cdot})$ be a metrized line bundle of degree $d$, then
 $$\int_{C^{an}} c_1(L,\norm{\cdot})=d.$$
 \end{enumerate}
 \end{bbox}
-\section{statement of the main theorem}
+\section{Statement of the main theorem}
 Fix $K$ be an non-Archimedean field,\footnote{We can suppose $K=\bar{K}$ to avoid some technical conditions.} and $C/K$ be a smooth projective curve, and $x\in C(\bar{K})$ be a point. We have the following canonical maps
 
 \begin{figure}[th]
@@ -253,7 +253,7 @@ we can also define the Green's functions as follows:
  &g_{x}:C^{an} \setminus {x} \longrightarrow \mathbb{R} \qquad  &&g_{x}(y):=-\log \big(\norm{1}_{x}(y)\big) =g_{\Delta}(x,y) \\
 \end{aligned}
 \end{equation*}
-\begin{defn}[symmetric metric]
+\begin{defn}[Symmetric metric]
 The metric $\norm{\cdot}_{\Delta}$ over the line bundle $\mathcal{O}_{C^2}(\Delta)$ is symmetric if the corresponding Green's function $g_{\Delta}(x,y)$ is symmetric.
 \end{defn}
 In the following pages, when the norm  $\norm{\cdot}_{\Delta}$ is special, we would replace the notations $\norm{\cdot}_{\Delta}$ by $\norm{\cdot}_{\Delta,a}$, $\norm{\cdot}_{\omega_C}$ by $\norm{\cdot}_{a}$, $\norm{\cdot}_{\mathcal{O}_C(x)}$ by $\norm{\cdot}_{x}$ and $g_{\Delta}$ by $g_{\Delta,a}$. \footnote{Here the letter $a$ means ``admissible". We will define the ``admissible metric" over a curve on Section \ref{sec:existence}, and actually ``admissible metric" over $\mathcal{O}_{C^2}(\Delta)$ is defined in \cite[Appendix A.3, p79]{yuan2021arithmetic}.}
@@ -264,7 +264,7 @@ Finally we can state our central theorem:
 \begin{theorem}[Zhang's metric]\label{thm:main}
 Suppose $K=\bar{K}$.\footnote{It's not an essential condition, we just don't want to worry about finite field extension.}There is a unique symmetric integrable metric $\norm{\cdot}_{\Delta,a}$ over $\mathcal{O}_{C^2}(\Delta)$ such that for any $x,y \in C(K)$, we have
 \begin{enumerate}[(1)]
-\item (compatibility, or admissible) We have the identities
+\item (Compatibility, or admissible) We have the identities
 \begin{equation*}
 \begin{aligned}
   c_1(\mathcal{O}(x),\norm{\cdot}_x)&=c_1(\mathcal{O}(y),\norm{\cdot}_y)  \\ 
@@ -272,13 +272,13 @@ Suppose $K=\bar{K}$.\footnote{It's not an essential condition, we just don't wan
 \end{aligned}
 \end{equation*}
 as the Chambert-Loir measure;
-\item (normalization) We always have the equality
+\item (Normalization) We always have the equality
 $$\int_{C^{an}} g_x(-) c_1(\mathcal{O}(x),\norm{\cdot}_x) =0.$$
 \end{enumerate}
 We will call this metric $\norm{\cdot}_{\Delta,a}$ and its induced metric $\norm{\cdot}_{a}$ as the Zhang's metric.
 \end{theorem}
 
-\section{uniqueness}
+\section{Uniqueness}
 In this section we want to prove the uniqueness part. If we have two metrics $\norm{\cdot}_{\Delta,a}$ and $\norm{\cdot}_{\Delta,a}'$ satisfying the Theorem \ref{thm:main}, we just denote $\norm{\cdot}_a'$, $\norm{\cdot}_x'$, $g_{\Delta,a}'(x,y)$ and $g_x'(y)$ as the induced metrics or Green's functions induced by $\norm{\cdot}_{\Delta,a}'$. We also fix $x_0 \in C(K)$, and denote 
 $$\frac{\norm{\cdot}_{x_0}'(y)}{\norm{\cdot}_{x_0}(y)}=e^{\varphi(y)}$$
 where $\varphi:C^{an} \longrightarrow \mathbb{R}$ is a continous function on $C^{an}$.
@@ -341,7 +341,7 @@ We use the normalization as follows:
 \end{equation*}
 so $\norm{\cdot}_x'=\norm{\cdot}_x$, we get finally $\norm{\cdot}_{\Delta,a}'=\norm{\cdot}_{\Delta,a}$.
 
-\section{admissible metric over $C^{an}$}\label{sec:existence}
+\section{Admissible metric over $C^{an}$}\label{sec:existence}
 
 For the existence part of the main theorem, one should define the ``admissibility" of the metric. We will see that the admissable metric exists and is unique up to the multiplication of an constant. Thus the proof can be divided into two parts:
 \begin{itemize}
@@ -350,7 +350,7 @@ For the existence part of the main theorem, one should define the ``admissibilit
 \end{itemize}
 Still, it's not easy to define and construct the admissable metric over curves. Actually, we first define the admissible metric over Abelian varieties, and then embed the curve into its Jacobian to get the ``admissibility" property.
 
-\begin{defn}[admissible metric over an Abelian variety]
+\begin{defn}[Admissible metric over an Abelian variety]
 Let $(L,\norm{\cdot}_L)$ be a metrized line bundle over an Abelian variety $A$. We define the admissibility step by step:
 \begin{itemize}
 \item  when $L$ is even, i.e. $[-1]^*L\cong L$, we get $[2]^*L\cong L^{\otimes 4}$. The norm $\norm{\cdot}_L$ is called admissible when this isomorphism induces the isomorphism of metrized line bundle, i.e.
@@ -372,7 +372,7 @@ $$T_{\beta_0}: A\longrightarrow A \qquad \beta \longmapsto \beta+\beta_0;$$
 that means, once we have the admissible metrized line bundle $(L,\norm{\cdot}_L)$ over $A$, then the induced metrized line bundle $T_{\beta_0}^{*}(L,\norm{\cdot}_L)$ is also admissible.
 \end{remark}
 Now we can define the admissibility of a metric over a curve.
-\begin{defn}[admissible metric over a curve]
+\begin{defn}[Admissible metric over a curve]
 Fix $\alpha \in \Pic^1(C)$, it induce an embedding $i_{\alpha}:C \hookrightarrow J:=\Jac(C)$ and also a theta divisor $\theta_{\alpha}$ over $J$.\footnote{Remember that our curve is of genus $g>0$.} 
 
 A metrized line bundle $(L,\norm{\cdot}_L)$ over the curve $C^{an}$ is called admissible if there exists a metrized line bundle $(M,\norm{\cdot}_M)$ over $J$, such that 
